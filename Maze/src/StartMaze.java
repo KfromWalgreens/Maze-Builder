@@ -16,6 +16,26 @@ import javafx.scene.layout.HBox;
 public class StartMaze extends Application{
     private Button[][] but;
 
+    private char getColorChar(Button b)
+    {
+        if (b.getStyle().indexOf("blue") > -1) {
+            System.out.print("0");
+            return '0';
+        }
+        else if (b.getStyle().indexOf("white") > -1) {
+            System.out.print("1");
+            return '1';
+        }
+        else if (b.getStyle().indexOf("green") > -1) {
+            System.out.print("S");
+            return 'S';
+        }
+        else {
+            System.out.print("E");
+            return 'E';
+        }
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
 
@@ -41,6 +61,42 @@ public class StartMaze extends Application{
                     gridPane.add(but[i][j], i, j);
                     but[i][j].setStyle("-fx-background-color: blue;");
                     but[i][j].setPrefSize(30, 30);
+                    but[i][j].setOnAction(new EventHandler<ActionEvent>(){
+                        @Override
+                        public void handle( ActionEvent e)
+                        {
+                            //e.getSource() returns the button that was clicked.
+                            Button b = (Button) e.getSource();
+
+                            if (b.getText().equals("Save")) {
+                                //create output file
+
+                            }
+                            else if (b.getText().equals("Exit")) {
+                                //exit the application
+
+                            }
+                            else { //a maze button was clicked
+
+                                char val = getColorChar(b);
+                                if (val == '0') {  //the button is currently blue so change it to white
+                                    b.setStyle("-fx-background-color: white;");
+                                }
+                                else if (val == '1') {
+                                    //TODO: Set background color to green
+                                    b.setStyle("-fx-background-color: green;");
+                                }
+                                else if (val == 'S') {
+                                    //TODO: Set background color to red
+                                    b.setStyle("-fx-background-color: red;");
+                                }
+                                else {
+                                    //TODO: Set background color back to blue
+                                    b.setStyle("-fx-background-color: blue;");
+                                }
+                            }
+                        }
+                    });
                 }
             }
             Button save = new Button("Save");
@@ -54,7 +110,7 @@ public class StartMaze extends Application{
             BorderPane border_pane = new BorderPane(gridPane, label1, label2, hbox, label3);
             border_pane.setAlignment(hbox, Pos.CENTER);
 
-            Scene scene = new Scene(border_pane, 400, 300);
+            Scene scene = new Scene(border_pane, rows * 50, columns *50);
             stage.setScene(scene);
             stage.show();
 
@@ -64,62 +120,6 @@ public class StartMaze extends Application{
 
     public static void main(String[] args) {
         Application.launch(args);
-    }
-
-    private char getColorChar(Button b)
-    {
-        if (b.getStyle().indexOf("blue") > -1) {
-            System.out.print("0");
-            return '0';
-        }
-        else if (b.getStyle().indexOf("white") > -1) {
-            return '1';
-        }
-        else if (b.getStyle().indexOf("green") > -1) {
-            return 'S';
-        }
-        else {
-            return 'E';
-        }
-    }
-
-  //  Inner class lister for buttons
-    public class MyHandler implements EventHandler<ActionEvent>
-    {
-        @Override
-        public void handle( ActionEvent e)
-        {
-            //e.getSource() returns the button that was clicked.
-            Button b = (Button) e.getSource();
-
-            if (b.getText().equals("Save")) {
-                //create output file
-
-            }
-            else if (b.getText().equals("Exit")) {
-                //exit the application
-
-            }
-            else { //a maze button was clicked
-
-                char val = getColorChar(b);
-                if (val == '0') {  //the button is currently blue so change it to white
-                    b.setStyle("-fx-background-color: white;");
-                }
-                else if (val == '1') {
-                    //TODO: Set background color to green
-                    b.setStyle("-fx-background-color: green;");
-                }
-                else if (val == 'S') {
-                    //TODO: Set background color to red
-                    b.setStyle("-fx-background-color: red;");
-                }
-                else {
-                    //TODO: Set background color back to blue
-                    b.setStyle("-fx-background-color: blue;");
-                }
-            }
-        }
     }
 }
 

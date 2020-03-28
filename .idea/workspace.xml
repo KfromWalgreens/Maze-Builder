@@ -26,7 +26,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8.0_241" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab-4-KfromWalgreens" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -87,34 +87,34 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585069465664" />
-    <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser" timestamp="1585170933720">
+    <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser" timestamp="1585433889890">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1585170933720" />
+    <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1585433889890" />
     <state x="412" y="149" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1585069310404">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="412" y="149" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1585069310404" />
-    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1585069745996">
+    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1585360462576">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585069745996" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1585172559267">
+    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585360462576" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1585436413052">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585172559267" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1585172559267">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585436413052" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1585436413051">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585172559267" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1585172559266">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585436413051" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1585436413051">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585172559266" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1585172559267">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585436413051" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1585436413051">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585172559267" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585436413051" />
     <state x="163" y="0" key="SettingsEditor" timestamp="1585069563027">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
