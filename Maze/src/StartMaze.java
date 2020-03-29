@@ -109,7 +109,6 @@ public class StartMaze extends Application{
             Button save = new Button("Save");
             save.setOnAction(e -> {
                 File selectedFile = fileChooser.showOpenDialog(primaryStage);
-                //File selectedFile = fileChooser.showOpenDialog(primaryStage);
                 PrintStream output = null;
                 try {
                     output = new PrintStream(new File(String.valueOf(selectedFile)));
@@ -130,6 +129,28 @@ public class StartMaze extends Application{
                 }
             });
             Button exit = new Button("Exit");
+            exit.setOnAction(e -> {
+                File selectedFile = fileChooser.showOpenDialog(primaryStage);
+                PrintStream output = null;
+                try {
+                    output = new PrintStream(new File(String.valueOf(selectedFile)));
+                } catch (FileNotFoundException ex) {
+                    ex.printStackTrace();
+                }
+                output.println(rows + " " + columns);
+                int count = 0;
+                for(int i = 0; i < rows; i++){
+                    for(int j = 0; j < columns; j++){
+                        output.print(getColorChar(but[i][j]));
+                        count++;
+                        if(count == rows){
+                            output.println();
+                            count = 0;
+                        }
+                    }
+                }
+                System.exit(0);
+            });
 
             HBox hbox = new HBox(save, exit);
             Label label1 = new Label("");
