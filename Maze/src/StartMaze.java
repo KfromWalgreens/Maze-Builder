@@ -108,10 +108,11 @@ public class StartMaze extends Application{
             FileChooser fileChooser = new FileChooser();
             Button save = new Button("Save");
             save.setOnAction(e -> {
+                File selectedFile = fileChooser.showOpenDialog(primaryStage);
                 //File selectedFile = fileChooser.showOpenDialog(primaryStage);
                 PrintStream output = null;
                 try {
-                    output = new PrintStream(new File("test.txt"));
+                    output = new PrintStream(new File(String.valueOf(selectedFile)));
                 } catch (FileNotFoundException ex) {
                     ex.printStackTrace();
                 }
