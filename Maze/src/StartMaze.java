@@ -73,15 +73,7 @@ public class StartMaze extends Application{
                             //e.getSource() returns the button that was clicked.
                             Button b = (Button) e.getSource();
 
-                            if (b.getText().equals("Save")) {
-                                //create output file
-
-                            }
-                            else if (b.getText().equals("Exit")) {
-                                //exit the application
-
-                            }
-                            else { //a maze button was clicked
+                            //a maze button was clicked
 
                                 char val = getColorChar(b);
                                 if (val == '0') {  //the button is currently blue so change it to white
@@ -100,7 +92,6 @@ public class StartMaze extends Application{
                                     b.setStyle("-fx-background-color: blue;");
                                 }
                             }
-                        }
                     });
                 }
             }
