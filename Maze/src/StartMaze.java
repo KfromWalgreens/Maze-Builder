@@ -9,8 +9,13 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.util.*;
 import javafx.scene.layout.HBox;
+import javafx.stage.FileChooser;
 
 
 public class StartMaze extends Application{
@@ -19,19 +24,19 @@ public class StartMaze extends Application{
     private char getColorChar(Button b)
     {
         if (b.getStyle().indexOf("blue") > -1) {
-            System.out.print("0");
+            //System.out.print("0");
             return '0';
         }
         else if (b.getStyle().indexOf("white") > -1) {
-            System.out.print("1");
+            //System.out.print("1");
             return '1';
         }
         else if (b.getStyle().indexOf("green") > -1) {
-            System.out.print("S");
+            //System.out.print("S");
             return 'S';
         }
         else {
-            System.out.print("E");
+            //System.out.print("E");
             return 'E';
         }
     }
@@ -99,7 +104,30 @@ public class StartMaze extends Application{
                     });
                 }
             }
+
+            FileChooser fileChooser = new FileChooser();
             Button save = new Button("Save");
+            save.setOnAction(e -> {
+                //File selectedFile = fileChooser.showOpenDialog(primaryStage);
+                PrintStream output = null;
+                try {
+                    output = new PrintStream(new File("test.txt"));
+                } catch (FileNotFoundException ex) {
+                    ex.printStackTrace();
+                }
+                output.println(rows + " " + columns);
+                int count = 0;
+                for(int i = 0; i < rows; i++){
+                    for(int j = 0; j < columns; j++){
+                        output.print(getColorChar(but[i][j]));
+                        count++;
+                        if(count == rows){
+                            output.println();
+                            count = 0;
+                        }
+                    }
+                }
+            });
             Button exit = new Button("Exit");
 
             HBox hbox = new HBox(save, exit);
